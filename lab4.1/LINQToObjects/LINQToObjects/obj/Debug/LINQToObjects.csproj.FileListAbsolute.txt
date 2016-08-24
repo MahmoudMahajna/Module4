@@ -10,3 +10,6 @@ C:\Users\Mahmood\Source\Repos\Module4\lab4.1\LINQToObjects\LINQToObjects\obj\Deb
 C:\Users\Mahmood\Source\Repos\Module4\lab4.1\LINQToObjects\LINQToObjects\bin\Debug\LINQToObjects.exe
 C:\Users\Mahmood\Source\Repos\Module4\lab4.1\LINQToObjects\LINQToObjects\bin\Debug\LINQToObjects.pdb
 C:\Users\Mahmood\Source\Repos\Module4\lab4.1\LINQToObjects\LINQToObjects\obj\Debug\LINQToObjects.csprojResolveAssemblyReference.cache
+C:\Users\CodeValue\Source\Repos\MuhamadMahajna\Module4\lab4.1\LINQToObjects\LINQToObjects\bin\Debug\LINQToObjects.exe.config
+C:\Users\CodeValue\Source\Repos\MuhamadMahajna\Module4\lab4.1\LINQToObjects\LINQToObjects\obj\Debug\LINQToObjects.exe
+C:\Users\CodeValue\Source\Repos\MuhamadMahajna\Module4\lab4.1\LINQToObjects\LINQToObjects\obj\Debug\LINQToObjects.pdb

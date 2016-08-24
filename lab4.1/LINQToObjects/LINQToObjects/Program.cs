@@ -39,7 +39,7 @@ namespace LINQToObjects
                 Console.WriteLine(e.Message);
                 Console.Read();
             }
-
+            //Where is CopyTo Example ???
         }
 
         private static void DisplayAllPublicInterfaces()
@@ -55,14 +55,26 @@ namespace LINQToObjects
 
         private static void DisplayAllProcessesRunning()
         {
-            //.. When I'm trying to get the process start time I got access denied .
+            //.. When I'm trying to get the process start time I got access denied => See below the answer
             Console.WriteLine();
             Console.WriteLine("------------------------------b-----------------------------");
             (from process in Processes
-             where process.Threads.Count <= 5
+             where process.Threads.Count <= 5 // && CanAccess(process)
              orderby process.Id
              select new { process.ProcessName, ProcessId = process.Id/*,ProcessStartTime=process.StartTime */}).ToList().ForEach(Console.WriteLine);
         }
+        //public static bool CanAccess(Process processForStartTime)
+        //{
+        //    try
+        //    {
+        //        var isExisteStartTime = processForStartTime.StartTime;
+        //        return true;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return false;
+        //    }
+        //}
 
         private static void DisplayWithDroupingByBasePriority()
         {
@@ -73,6 +85,7 @@ namespace LINQToObjects
              orderby process.Id
              group process by process.BasePriority).ToList().ForEach((group) =>
              {
+                 // Extract to new method and pass "group" as parameter
                  Console.WriteLine($"{group.Key}");
                  foreach (var process in group)
                  {

@@ -7,3 +7,6 @@ C:\Users\Mahmood\Source\Repos\Lab4.2\XLinq\XLinq\obj\Debug\XLinq.pdb
 C:\Users\Mahmood\Source\Repos\Module4\Lab4.2\XLinq\XLinq\bin\Debug\XLinq.exe.config
 C:\Users\Mahmood\Source\Repos\Module4\Lab4.2\XLinq\XLinq\obj\Debug\XLinq.exe
 C:\Users\Mahmood\Source\Repos\Module4\Lab4.2\XLinq\XLinq\obj\Debug\XLinq.pdb
+C:\Users\CodeValue\Source\Repos\MuhamadMahajna\Module4\Lab4.2\XLinq\XLinq\bin\Debug\XLinq.exe.config
+C:\Users\CodeValue\Source\Repos\MuhamadMahajna\Module4\Lab4.2\XLinq\XLinq\obj\Debug\XLinq.exe
+C:\Users\CodeValue\Source\Repos\MuhamadMahajna\Module4\Lab4.2\XLinq\XLinq\obj\Debug\XLinq.pdb

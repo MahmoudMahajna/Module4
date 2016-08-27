@@ -100,9 +100,11 @@ namespace XLinq
             Console.WriteLine(
                 $"The most common parameter type: {mostCommon.First().Type},Count= {mostCommon.First().Count}");
         }
-
+        // ofWhat is very bad name
         private static int CountTotalNumOf(string ofWhat)
         {
+            // should be something like this:
+            // from x in _element.Elements().where x.Descendants(ofWhat).Select(x).Count();
             return (from elements in (from type in _element.Elements() select type.Element(ofWhat))
                 select elements.Elements().Count()).Sum();
         }
@@ -110,9 +112,9 @@ namespace XLinq
         private static void DisplayTypesWithoutProps()
         {
             var typesWithoutProps = from xElement in _element.Elements()
-                where !(xElement.Element("Properties")?.Elements()).Any()
-                orderby xElement.Name
-                select xElement;
+                where !(xElement.Element("Properties")?.Elements()).Any() // should be checked for empty
+                orderby xElement.Name // should be ordered by attribute
+                select xElement;      // should be selected by attribute
             foreach (var el in typesWithoutProps)
             {
                 Console.WriteLine(el);
@@ -124,6 +126,7 @@ namespace XLinq
         {
             var mscorlib = Assembly.Load("mscorlib ");
             var types = mscorlib.GetTypes().Where(type => !type.IsInterface && !type.IsValueType && type.IsPublic);
+            // why not with LINQ?? 
             foreach (var type in types)
             {
                 try
@@ -141,6 +144,7 @@ namespace XLinq
 
         private static XElement CreateXmlFromatOfType(Type type)
         {
+            // very bad LINQ... you must to understand how to use "From... in...." syntex !!!!!
             var proprties =
                 type.GetProperties().Select(prop => new XElement("Property", new XAttribute("Name", prop.Name)
                     , new XAttribute("Type", prop.GetType().Name)));
